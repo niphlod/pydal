@@ -3,6 +3,9 @@ build: false
 services:
   - mssql2014
 
+cache:
+  - %LOCALAPPDATA%\.pip-cache -> appveyor.yml
+
 environment:
   matrix:
     - PYTHON: "C:/Python27"
@@ -23,6 +26,7 @@ clone_depth: 50
 init:
   - "ECHO %PYTHON%"
   - set PATH=%PYTHON%;%PYTHON%\Scripts;%PATH%
+  - set PIP_DOWNLOAD_CACHE=%LOCALAPPDATA%\.pip-cache
 
 install:
   - ps: Start-FileDownload https://bootstrap.pypa.io/get-pip.py
