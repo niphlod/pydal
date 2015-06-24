@@ -14,7 +14,7 @@ install:
 
 env:
   global:
-    - PIP_CACHE_DIR=$HOME/.pip-cache
+    - PIP_CACHE_DIR=$HOME/.pip-cache 
   matrix:
     - ADAPTER=sqlite
     - ADAPTER=mysql
