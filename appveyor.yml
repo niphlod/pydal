@@ -26,7 +26,7 @@ clone_depth: 50
 init:
   - "ECHO %PYTHON%"
   - set PATH=%PYTHON%;%PYTHON%\Scripts;%PATH%
-  - set PIP_DOWNLOAD_CACHE=%LOCALAPPDATA%\.pip-cache
+  - set PIP_CACHE_DIR=%LOCALAPPDATA%\.pip-cache
 
 install:
   - ps: Start-FileDownload https://bootstrap.pypa.io/get-pip.py
